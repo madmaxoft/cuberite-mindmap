@@ -387,5 +387,19 @@
 <node TEXT="Add API to add world names to auto-completion" ID="ID_1645053171" CREATED="1450634175315" MODIFIED="1450634184019"/>
 <node TEXT="Add API to add client IPs to auto-completion" ID="ID_1638942712" CREATED="1450634199571" MODIFIED="1450634208759"/>
 </node>
+<node TEXT="Multitasking plugins" POSITION="right" ID="ID_521251098" CREATED="1450645874126" MODIFIED="1450645879911">
+<node TEXT="Let plugins create tasks that run on background" ID="ID_1371730850" CREATED="1450645881079" MODIFIED="1450645890531"/>
+<node TEXT="Each such task creates a separate cLuaState" ID="ID_408290096" CREATED="1450645890975" MODIFIED="1450645898050">
+<node TEXT="Independent state" ID="ID_1977458089" CREATED="1450645919207" MODIFIED="1450645923162"/>
+<node TEXT="Own mutex" ID="ID_667575164" CREATED="1450645923405" MODIFIED="1450645939234"/>
+<node TEXT="Inter-task communication" ID="ID_1593813712" CREATED="1450645944846" MODIFIED="1450645953251">
+<node TEXT="Like cPluginManager:CallPlugin?" ID="ID_657635315" CREATED="1450645965559" MODIFIED="1450646000530"/>
+</node>
+<node TEXT="How to route cPluginManager:Call() calls to a plugin with multiple tasks?" ID="ID_919068605" CREATED="1450645971821" MODIFIED="1450645994026"/>
+<node TEXT="Full set of API functions available in each task state" ID="ID_425238423" CREATED="1450646244460" MODIFIED="1450646259465">
+<node TEXT="All plugin callbacks need to be changed to route to a task, not plugin" ID="ID_1459989171" CREATED="1450646265268" MODIFIED="1450646291120"/>
+</node>
+</node>
+</node>
 </node>
 </map>

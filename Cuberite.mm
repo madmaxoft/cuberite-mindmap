@@ -449,5 +449,19 @@
 <node TEXT="Allows RCON-like plugins" ID="ID_465871793" CREATED="1450690189964" MODIFIED="1450690199193"/>
 </node>
 </node>
+<node TEXT="Ownership / ticking refactor" POSITION="right" ID="ID_452326995" CREATED="1450718701899" MODIFIED="1450718713566">
+<node TEXT="All entitites should be represented using SharedPtrs" ID="ID_1116990246" CREATED="1450718726617" MODIFIED="1450718738160"/>
+<node TEXT="ClientHandles should be SharedPtrs" ID="ID_1011189370" CREATED="1450718740124" MODIFIED="1450718746039"/>
+<node TEXT="Replace hard-binding between cClientHandle and cPlayer" ID="ID_1593905700" CREATED="1450718746851" MODIFIED="1450718780333">
+<node TEXT="Each gets a WeakPtr of the other" ID="ID_1405475710" CREATED="1450718781216" MODIFIED="1450718790765"/>
+<node TEXT="There can be a client without a player and a player without a client" ID="ID_773410653" CREATED="1450718791568" MODIFIED="1450718801893"/>
+</node>
+<node TEXT="Entities are ticked by the chunk they&apos;re in" ID="ID_948106588" CREATED="1450718822461" MODIFIED="1450718840236"/>
+<node TEXT="Add new entities to a world via an add-queue" ID="ID_1897977393" CREATED="1450718853975" MODIFIED="1450718882323"/>
+<node TEXT="ClientHandles ticked within the network thread (LibEvent)" ID="ID_1494260047" CREATED="1450718890284" MODIFIED="1450718912808">
+<node TEXT="Needs worktycho&apos;s protocol refactor" ID="ID_1687779925" CREATED="1450718925932" MODIFIED="1450718937543"/>
+<node TEXT="Incoming packets queue ClientAction descendants onto cPlayer" ID="ID_990281437" CREATED="1450718939563" MODIFIED="1450718959205"/>
+</node>
+</node>
 </node>
 </map>

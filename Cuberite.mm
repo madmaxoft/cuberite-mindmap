@@ -50,8 +50,8 @@
 </map_styles>
 </hook>
 <node TEXT="Plugins" POSITION="right" ID="ID_588200534" CREATED="1450632829277" MODIFIED="1450632833088">
-<node TEXT="LobbyAPI plugin" ID="ID_562508146" CREATED="1449781274782" MODIFIED="1449781278199">
-<node TEXT="Objects" ID="ID_1431337841" CREATED="1449781282948" MODIFIED="1449781288386">
+<node TEXT="LobbyAPI" ID="ID_562508146" CREATED="1449781274782" MODIFIED="1450690470541">
+<node TEXT="Objects" ID="ID_1431337841" CREATED="1449781282948" MODIFIED="1450690470541">
 <node TEXT="Lobby" ID="ID_1040053495" CREATED="1449781292971" MODIFIED="1449781295094">
 <node TEXT="Waiting area, until enough players join the minigame" ID="ID_1550148924" CREATED="1449781536547" MODIFIED="1449781561274"/>
 <node TEXT="Could have separate chat channel" ID="ID_1326022137" CREATED="1449781563247" MODIFIED="1449781582108"/>
@@ -88,6 +88,19 @@
 <node TEXT="Player leaves minigame" ID="ID_1281727289" CREATED="1449781808742" MODIFIED="1449781815420">
 <node TEXT="Inventory restored" ID="ID_1191757990" CREATED="1449829850135" MODIFIED="1449829855356"/>
 </node>
+</node>
+</node>
+<node TEXT="RCONS" ID="ID_826547044" CREATED="1450690276362" MODIFIED="1450690279117">
+<node TEXT="RCON-like comm over TLS" ID="ID_1651825270" CREATED="1450690279944" MODIFIED="1450690295756"/>
+<node TEXT="Server authenticates using a cert, set in INI file" ID="ID_1108968999" CREATED="1450690576085" MODIFIED="1450690590513"/>
+<node TEXT="Client authenticates with a password, set in INI file" ID="ID_101785517" CREATED="1450690525034" MODIFIED="1450690534566">
+<node TEXT="No need for multi-user" ID="ID_1216099693" CREATED="1450690536358" MODIFIED="1450690541582"/>
+</node>
+<node TEXT="Commands can be executed over the network as if on the server console" ID="ID_507862923" CREATED="1450690301402" MODIFIED="1450690353618"/>
+<node TEXT="Command responses are sent back to the remote client" ID="ID_1033766048" CREATED="1450690354069" MODIFIED="1450690362651"/>
+<node TEXT="Needs &quot;Commands overhaul&quot; first" ID="ID_1869349991" CREATED="1450690388205" MODIFIED="1450690464990"/>
+<node TEXT="Allows &quot;remote restart&quot;, including player notifications" ID="ID_388012493" CREATED="1450690705800" MODIFIED="1450690721516">
+<node TEXT="Forum ref" ID="ID_178742432" CREATED="1450690775055" MODIFIED="1450690831196" LINK="http://forum.mc-server.org/showthread.php?tid=2260&amp;pid=24082#pid24082"/>
 </node>
 </node>
 </node>
@@ -399,6 +412,41 @@
 <node TEXT="Full set of API functions available in each task state" ID="ID_425238423" CREATED="1450646244460" MODIFIED="1450646259465">
 <node TEXT="All plugin callbacks need to be changed to route to a task, not plugin" ID="ID_1459989171" CREATED="1450646265268" MODIFIED="1450646291120"/>
 </node>
+</node>
+</node>
+<node TEXT="Commands overhaul" POSITION="right" ID="ID_290037814" CREATED="1450646371204" MODIFIED="1450646380000">
+<node TEXT="Command locations" ID="ID_1285378848" CREATED="1450646380725" MODIFIED="1450646391352">
+<node TEXT="Server console" ID="ID_734558588" CREATED="1450646391900" MODIFIED="1450646395583"/>
+<node TEXT="Player chat" ID="ID_1488602015" CREATED="1450646395899" MODIFIED="1450646397680"/>
+<node TEXT="Command block" ID="ID_454030431" CREATED="1450646398754" MODIFIED="1450646403055"/>
+</node>
+<node TEXT="Continuation support" ID="ID_679855295" CREATED="1450646405035" MODIFIED="1450646421000">
+<node TEXT="Command output may be produced after the callback finishes" ID="ID_245311239" CREATED="1450646422138" MODIFIED="1450646436703">
+<node TEXT="Output after scheduled action - chunk load etc." ID="ID_112972197" CREATED="1450646437419" MODIFIED="1450646456023"/>
+</node>
+<node TEXT="Command handler receives a continuation object" ID="ID_1628239323" CREATED="1450646458851" MODIFIED="1450646468503"/>
+<node TEXT="Need to protect against unwanted continuation blockage" ID="ID_1619819504" CREATED="1450646469338" MODIFIED="1450646480936"/>
+<node TEXT="Need to support existing handlers" ID="ID_1357815547" CREATED="1450646481299" MODIFIED="1450646490151">
+<node TEXT="Commands can still return the response string" ID="ID_1508649007" CREATED="1450646640603" MODIFIED="1450646646886"/>
+<node TEXT="Unless the continuation object is used, command is considered finished upon handler return" ID="ID_1880575560" CREATED="1450646648945" MODIFIED="1450646672239"/>
+<node TEXT="If continuation is used, return value is output to the continuation upon return" ID="ID_1817534599" CREATED="1450646683577" MODIFIED="1450646703214"/>
+<node TEXT="Need timeouts, at least for debugging?" ID="ID_903320781" CREATED="1450646708368" MODIFIED="1450646724165"/>
+</node>
+<node TEXT="Command block may not support this (?)" ID="ID_943590972" CREATED="1450646574786" MODIFIED="1450646582463"/>
+</node>
+<node TEXT="Command properties" ID="ID_729764860" CREATED="1450646510499" MODIFIED="1450646514814">
+<node TEXT="Command string (all)" ID="ID_989032173" CREATED="1450646515354" MODIFIED="1450646543214"/>
+<node TEXT="Author (player)" ID="ID_112898756" CREATED="1450646531883" MODIFIED="1450646538935"/>
+<node TEXT="Location (player, block)" ID="ID_173029184" CREATED="1450646552690" MODIFIED="1450646561966"/>
+<node TEXT="Response (console, player)" ID="ID_299970540" CREATED="1450646544058" MODIFIED="1450646550374"/>
+</node>
+<node TEXT="Continuation support exported to API" ID="ID_1150112674" CREATED="1450690144646" MODIFIED="1450690152794">
+<node TEXT="Functions" ID="ID_1323569810" CREATED="1450690182540" MODIFIED="1450690184240">
+<node TEXT="ExecuteCommand" ID="ID_143138973" CREATED="1450690153396" MODIFIED="1450690156514"/>
+<node TEXT="ExecuteConsoleCommand" ID="ID_813345449" CREATED="1450690157029" MODIFIED="1450690160315"/>
+<node TEXT="ExecuteCommandBlockCommand" ID="ID_1602466797" CREATED="1450690168325" MODIFIED="1450690173217"/>
+</node>
+<node TEXT="Allows RCON-like plugins" ID="ID_465871793" CREATED="1450690189964" MODIFIED="1450690199193"/>
 </node>
 </node>
 </node>

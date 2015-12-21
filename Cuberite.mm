@@ -462,6 +462,27 @@
 <node TEXT="Needs worktycho&apos;s protocol refactor" ID="ID_1687779925" CREATED="1450718925932" MODIFIED="1450718937543"/>
 <node TEXT="Incoming packets queue ClientAction descendants onto cPlayer" ID="ID_990281437" CREATED="1450718939563" MODIFIED="1450718959205"/>
 </node>
+<node TEXT="Can provide LuaAPI with proper GetPlayer() / GetEntity() functions" ID="ID_1997273369" CREATED="1450719074607" MODIFIED="1450719088003">
+<node TEXT="Entity objects will be valid as long as Lua holds them" ID="ID_1589748439" CREATED="1450719089135" MODIFIED="1450719098347"/>
+<node TEXT="Lua code needs to check all returned values for nil" ID="ID_1788465638" CREATED="1450719098735" MODIFIED="1450719113259">
+<node TEXT="world = a_Entity:GetWorld(), if world ~= nil world:doSomething() end" ID="ID_1146912679" CREATED="1450719115242" MODIFIED="1450719144833"/>
+</node>
+<node TEXT="Will we keep the old API?" ID="ID_214156276" CREATED="1450719165436" MODIFIED="1450719170519">
+<node TEXT="Is the old API still compatible with this model?" ID="ID_665748755" CREATED="1450719180309" MODIFIED="1450719188376"/>
+</node>
+</node>
+</node>
+<node TEXT="OSSupport split" POSITION="right" ID="ID_1749184873" CREATED="1450739669614" MODIFIED="1450739676962">
+<node TEXT="Move OSSupport into a separate submodule" ID="ID_1406680658" CREATED="1450739677629" MODIFIED="1450739687450"/>
+<node TEXT="Only generic (non-Cuberite) methods and objects" ID="ID_1397988397" CREATED="1450739688948" MODIFIED="1450739702506"/>
+<node TEXT="Add StringUtils" ID="ID_1146658327" CREATED="1450739703220" MODIFIED="1450739706658">
+<node TEXT="Except for the StripColorCodes function" ID="ID_1845984059" CREATED="1450739707068" MODIFIED="1450739783748"/>
+</node>
+<node TEXT="Remove thread sync objects in favor of C++11&apos;s primitives" ID="ID_1096862477" CREATED="1450739900092" MODIFIED="1450739917249">
+<node TEXT="Can we do that?" ID="ID_1210677068" CREATED="1450739920765" MODIFIED="1450739935719"/>
+<node TEXT="Free annotations" ID="ID_810061087" CREATED="1450739938428" MODIFIED="1450739942412"/>
+</node>
+<node TEXT="Lib can be freely reused from other projects" ID="ID_384543941" CREATED="1450739950179" MODIFIED="1450739983216"/>
 </node>
 </node>
 </map>

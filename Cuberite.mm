@@ -588,5 +588,13 @@
 </node>
 </node>
 </node>
+<node TEXT="JSON exposed" POSITION="left" ID="ID_894630593" CREATED="1450797977461" MODIFIED="1450797980305">
+<node TEXT="Expose the C++ parser and serializer to Lua" ID="ID_432675364" CREATED="1450797981197" MODIFIED="1450798013912"/>
+<node TEXT="Use Lua tables for interface" ID="ID_189514678" CREATED="1450798014353" MODIFIED="1450798322784">
+<node TEXT="Parse(string) -&gt; table" ID="ID_1417315862" CREATED="1450798304273" MODIFIED="1450798311305"/>
+<node TEXT="Serialize(table) -&gt; string" ID="ID_1410952045" CREATED="1450798311896" MODIFIED="1450798316849"/>
+</node>
+<node TEXT="Entire implementation in the Bindings module" ID="ID_945716110" CREATED="1450798214474" MODIFIED="1450798221959"/>
+</node>
 </node>
 </map>

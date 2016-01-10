@@ -596,5 +596,17 @@
 </node>
 <node TEXT="Entire implementation in the Bindings module" ID="ID_945716110" CREATED="1450798214474" MODIFIED="1450798221959"/>
 </node>
+<node TEXT="MojangAPI async" POSITION="left" ID="ID_1916521869" CREATED="1452425963725" MODIFIED="1452425973399">
+<node TEXT="Plugins need to query UUIDs asynchronously" ID="ID_643779649" CREATED="1452425974234" MODIFIED="1452425981894"/>
+<node TEXT="Add API methods that take a callback" ID="ID_774319643" CREATED="1452425982177" MODIFIED="1452426019045">
+<node TEXT="Single-user APIs should directly report success or failure" ID="ID_1092124771" CREATED="1452426075561" MODIFIED="1452426092253"/>
+<node TEXT="Mass APIs should report failure only in case of a total failure (server unavailable etc)" ID="ID_688749883" CREATED="1452426092728" MODIFIED="1452426114125"/>
+</node>
+<node TEXT="Add a method to simplify handling of Offline-mode vs Online-mode UUIDs" ID="ID_1162726638" CREATED="1452426118640" MODIFIED="1452426159205">
+<node TEXT="Typically, a plugin wants an UUID, regardless of auth-mode" ID="ID_1828295926" CREATED="1452426188056" MODIFIED="1452426197676"/>
+<node TEXT="Want 1 function that returns player UUID based on current auth-mode" ID="ID_399717806" CREATED="1452426198719" MODIFIED="1452426227908"/>
+<node TEXT="Async" ID="ID_940325956" CREATED="1452426266207" MODIFIED="1452426275340"/>
+</node>
+</node>
 </node>
 </map>

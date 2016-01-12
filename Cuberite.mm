@@ -608,5 +608,20 @@
 <node TEXT="Async" ID="ID_940325956" CREATED="1452426266207" MODIFIED="1452426275340"/>
 </node>
 </node>
+<node TEXT="Player data files" POSITION="left" ID="ID_1958826616" CREATED="1452603123034" MODIFIED="1452603125852">
+<node TEXT="Use vanilla-format .dat files" ID="ID_332212809" CREATED="1452603126630" MODIFIED="1452603134170"/>
+<node TEXT="Store in the &quot;players&quot; folder" ID="ID_766649763" CREATED="1452603135011" MODIFIED="1452603166407">
+<node TEXT="Split the first two chars of the UUID as a subfolder" ID="ID_1254303971" CREATED="1452603168177" MODIFIED="1452603180374"/>
+<node TEXT="If not found in the subfolder, also try reading directly in the &quot;players folder" ID="ID_1345435297" CREATED="1452603182178" MODIFIED="1452603202654">
+<node TEXT="Allows direct imports from vanilla" ID="ID_290550196" CREATED="1452603203648" MODIFIED="1452603211447"/>
+</node>
+<node TEXT="Allow reading a single-player &quot;level.dat&quot; renamed to &quot;playername.dat&quot;" ID="ID_720500663" CREATED="1452604221117" MODIFIED="1452604242255">
+<node TEXT="Needs to look one NBT level down for data" ID="ID_153373623" CREATED="1452604243059" MODIFIED="1452604250338"/>
+</node>
+</node>
+<node TEXT="Need to map some values" ID="ID_1270570431" CREATED="1452603219524" MODIFIED="1452603224268">
+<node TEXT="World where the player is located" ID="ID_453823743" CREATED="1452603225825" MODIFIED="1452603233974"/>
+</node>
+</node>
 </node>
 </map>

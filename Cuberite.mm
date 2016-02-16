@@ -423,6 +423,7 @@
 <node TEXT="Continuation support" ID="ID_679855295" CREATED="1450646405035" MODIFIED="1450646421000">
 <node TEXT="Command output may be produced after the callback finishes" ID="ID_245311239" CREATED="1450646422138" MODIFIED="1450646436703">
 <node TEXT="Output after scheduled action - chunk load etc." ID="ID_112972197" CREATED="1450646437419" MODIFIED="1450646456023"/>
+<node TEXT="Output after network event" ID="ID_1234663906" CREATED="1455623039018" MODIFIED="1455623046361"/>
 </node>
 <node TEXT="Command handler receives a continuation object" ID="ID_1628239323" CREATED="1450646458851" MODIFIED="1450646468503"/>
 <node TEXT="Need to protect against unwanted continuation blockage" ID="ID_1619819504" CREATED="1450646469338" MODIFIED="1450646480936"/>
@@ -633,6 +634,12 @@
 <node TEXT="Need to map some values" ID="ID_1270570431" CREATED="1452603219524" MODIFIED="1452603224268">
 <node TEXT="World where the player is located" ID="ID_453823743" CREATED="1452603225825" MODIFIED="1452603233974"/>
 </node>
+</node>
+<node TEXT="TLS finishup" POSITION="right" ID="ID_499607492" CREATED="1455623141791" MODIFIED="1455623150570">
+<node TEXT="Need to support certificate management" ID="ID_234668038" CREATED="1455623153650" MODIFIED="1455623161178"/>
+<node TEXT="Callbacks for cert validation" ID="ID_1539582142" CREATED="1455623162008" MODIFIED="1455623167802"/>
+<node TEXT="Cert storage, load and save" ID="ID_1570623720" CREATED="1455623170517" MODIFIED="1455623178121"/>
+<node TEXT="Both internal and LuaAPI similar usage" ID="ID_971041877" CREATED="1455623191707" MODIFIED="1455623210635"/>
 </node>
 </node>
 </map>
